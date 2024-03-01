@@ -11,3 +11,13 @@ target_include_directories(pngImage PUBLIC
         )
         
 target_link_libraries(pngImage libpng)
+
+# install
+install(FILES 
+    ${CMAKE_CURRENT_SOURCE_DIR}/pngImage.hpp
+    DESTINATION include/PngImage
+)
+
+install(TARGETS pngImage 
+    ARCHIVE DESTINATION lib
+)
