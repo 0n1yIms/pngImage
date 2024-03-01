@@ -17,7 +17,7 @@ target_include_directories(libpng PUBLIC
 target_link_libraries(libpng zlib)
 
 #install
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
         DESTINATION include/libpng)
 install(TARGETS libpng ARCHIVE DESTINATION lib)
 

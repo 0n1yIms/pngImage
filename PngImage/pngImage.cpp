@@ -2,7 +2,7 @@
 // Created by imsac on 18/1/2022.
 //
 
-#include "pngImage.h"
+#include "pngImage.hpp"
 #include "png.h"
 #include <cstdlib>
 #include <cstdio>

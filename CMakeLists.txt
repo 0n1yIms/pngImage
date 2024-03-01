@@ -9,14 +9,12 @@ add_subdirectory(PngImage)
 
 # install
 install(FILES 
-    ${CMAKE_SOURCE_DIR}/PngImage/PngImage.h
-    DESTINATION include
+    ${CMAKE_SOURCE_DIR}/PngImage/PngImage.hpp
+    DESTINATION include/PngImage
 )
 
 install(TARGETS pngImage 
     ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION bin
-    RUNTIME DESTINATION bin
 )
 
 # for install run cmake --install ./build --config Release --prefix ./install

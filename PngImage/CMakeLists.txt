@@ -3,7 +3,7 @@ project(pngImage)
 
 
 add_library(pngImage STATIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/pngImage.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/pngImage.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/pngImage.cpp
         )
 target_include_directories(pngImage PUBLIC 
