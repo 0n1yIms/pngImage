@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6.0)
 project(pngImage)
 
 
-add_library(pngImage STATIC
+add_library(pngImage SHARED
         ${CMAKE_CURRENT_SOURCE_DIR}/pngImage.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/pngImage.cpp
         )
@@ -20,4 +20,6 @@ install(FILES
 
 install(TARGETS pngImage 
     ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
 )
