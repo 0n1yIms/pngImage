@@ -7,12 +7,18 @@ file (GLOB libpng_SRCS
 file (GLOB libpng_HDRS 
         ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c)
 
-set(libpng_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_library(libpng STATIC ${libpng_SRCS} ${libpng_HDRS})
+
 target_include_directories(libpng PUBLIC
-        ${libpng_INCLUDE}
-        ${zlib_INCLUDE}
-        )
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
 target_link_libraries(libpng zlib)
+
+#install
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include
+        DESTINATION include/libpng)
+install(TARGETS libpng ARCHIVE DESTINATION lib)
+
 
